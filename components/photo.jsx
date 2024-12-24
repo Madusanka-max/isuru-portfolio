@@ -6,20 +6,60 @@ import Image from "next/image";
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
-      <motion.div 
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.4, ease: 'easeIn' } }}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{ delay: 2, duration: 0.4, ease: "easeIn" }}
       >
-        <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
-          <Image
-            src="/assets/photo.png"
-            priority
-            quality={100}
-            fill
-            alt="Photo of Isuru Madusanka"
-            className="object-contain"
+        {/* Inner Photo Animation */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ delay: 2.4, duration: 0.4, ease: "easeInOut" }}
+        >
+          <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten rounded-full overflow-hidden flex justify-center items-center absolute">
+            <Image
+              src="/assets/pic.png"
+              priority
+              quality={100}
+              fill
+              alt="Photo of Isuru Madusanka"
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
+
+        {/* Circle Animation */}
+        <motion.svg
+          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+          fill="transparent"
+          viewBox="0 0 506 506"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.circle
+            cx="250"
+            cy="251"
+            r="250"
+            stroke="#00ff99"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{strokeDasharray: "120 10 0 0", }}
+            animate={{
+              strokeDasharray: ["15 120 25 25","16 25 92 72","4 250 22 22"],
+              rotate: [120,360],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
           />
-        </div>
+        </motion.svg>
       </motion.div>
     </div>
   );
