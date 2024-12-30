@@ -121,10 +121,7 @@ const Resume = () => {
               <ul>
                 {experience.items.map((item, index) => (
                   <li key={index} className="mb-2">
-                    <strong>
-                      {item.position} at {item.company}
-                    </strong>{" "}
-                    ({item.duration})
+                    <strong>{item.position} at {item.company}</strong> ({item.duration})
                   </li>
                 ))}
               </ul>
@@ -136,8 +133,7 @@ const Resume = () => {
               <ul>
                 {education.items.map((item, index) => (
                   <li key={index} className="mb-2">
-                    <strong>{item.degree}</strong> from{" "}
-                    <em>{item.institution}</em> ({item.duration})
+                    <strong>{item.degree}</strong> from <em>{item.institution}</em> ({item.duration})
                   </li>
                 ))}
               </ul>
@@ -148,17 +144,19 @@ const Resume = () => {
               <p>{skills.description}</p>
               <div className="flex flex-wrap gap-4">
                 {skills.skillList.map((skill, index) => (
-                  <Tooltip key={index}>
-                    <TooltipTrigger asChild>
-                      <div className="p-2 border rounded-lg text-center">
-                        {skill.icon}
+                  <TooltipProvider key={index}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div className="p-2 border rounded-lg text-center">
+                          {skill.icon}
+                          <p>{skill.name}</p>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>
                         <p>{skill.name}</p>
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipProvider>
-                      <TooltipContent>{skill.name}</TooltipContent>
-                    </TooltipProvider>
-                  </Tooltip>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 ))}
               </div>
             </TabsContent>
@@ -181,5 +179,6 @@ const Resume = () => {
     </motion.div>
   );
 };
+
 
 export default Resume;
