@@ -114,6 +114,7 @@ const Resume = () => {
             <TabsTrigger value="about" className="hover:text-accent">About Me</TabsTrigger>
           </TabsList>
 
+          {/* experience */}
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <h2 className="text-2xl font-bold mb-4">{experience.title}</h2>
@@ -127,6 +128,7 @@ const Resume = () => {
               </ul>
             </TabsContent>
 
+          {/* education */}
             <TabsContent value="education">
               <h2 className="text-2xl font-bold mb-4">{education.title}</h2>
               <p>{education.description}</p>
@@ -139,6 +141,7 @@ const Resume = () => {
               </ul>
             </TabsContent>
 
+          {/* skills */}
             <TabsContent value="skills">
               <h2 className="text-2xl font-bold mb-4">{skills.title}</h2>
               <p>{skills.description}</p>
@@ -161,6 +164,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
+          {/* about */}
             <TabsContent value="about">
               <h2 className="text-2xl font-bold mb-4">{about.title}</h2>
               <p>{about.description}</p>
