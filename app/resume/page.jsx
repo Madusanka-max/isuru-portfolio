@@ -170,26 +170,29 @@ const Resume = () => {
             </TabsContent>
 
           {/* skills */}
-            <TabsContent value="skills">
-              <h2 className="text-2xl font-bold mb-4">{skills.title}</h2>
-              <p>{skills.description}</p>
-              <div className="flex flex-wrap gap-4">
-                {skills.skillList.map((skill, index) => (
-                  <TooltipProvider key={index}>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <div className="p-2 border rounded-lg text-center">
-                          {skill.icon}
-                          <p>{skill.name}</p>
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{skill.name}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                ))}
+            <TabsContent value="skills" className="w-full h-full">
+             <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <p className="max-w[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
               </div>
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[30px]">
+                {skills.skillList.map((skills, index) =>{
+                  return (
+                    <li key={index}>
+                      <TooltipProvider>
+                        <Tooltip>
+                        <div className="flex items-center gap-3">
+                          {skills.icon}
+                        </div>
+                        </Tooltip>
+                      </TooltipProvider>
+                      
+                    </li>
+                  );
+                })}
+              </ul>
+             </div>
             </TabsContent>
 
           {/* about */}
