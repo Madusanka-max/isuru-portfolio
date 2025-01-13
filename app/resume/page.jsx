@@ -188,7 +188,7 @@ const Resume = () => {
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p className="capitalize rounded-xl bg-[#fff] text-black">{skills.name}</p>
+                            <p className="capitalize p-2 rounded bg-white text-black">{skills.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -201,17 +201,22 @@ const Resume = () => {
             </TabsContent>
 
           {/* about */}
-            <TabsContent value="about">
-              <h2 className="text-2xl font-bold mb-4">{about.title}</h2>
-              <p>{about.description}</p>
-              <ul>
-                {about.info.map((infoItem, index) => (
-                  <li key={index}>
-                    <strong>{infoItem.fieldName}: </strong>
-                    {infoItem.fieldvalue}
-                  </li>
-                ))}
-              </ul>
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 ">
+                  {about.info.map((infoItem, index) => {
+                    return(
+                    <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <span className="text-white/60">{infoItem.fieldName}</span>
+                      <span className="text-xl">{infoItem.fieldvalue}</span>
+                    </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              
             </TabsContent>
           </div>
         </Tabs>
