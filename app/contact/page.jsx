@@ -55,13 +55,15 @@ const contact = () => {
             {/* select */}
             <Select>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a service"></SelectValue>
+                <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent>
-                <SelectLabel>Select a service</SelectLabel>
-                <SelectItem value="est">Web Development</SelectItem>
-                <SelectItem value="cst">UI/UX Design</SelectItem>
-                <SelectItem value="mst">Logo Design</SelectItem>
+                <SelectGroup>
+                  <SelectLabel>Select a service</SelectLabel>
+                  <SelectItem value="est">Web Development</SelectItem>
+                  <SelectItem value="cst">UI/UX Design</SelectItem>
+                  <SelectItem value="mst">Logo Design</SelectItem>
+                </SelectGroup>
               </SelectContent>
             </Select>
           </form>
