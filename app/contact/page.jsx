@@ -3,9 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Description } from "@radix-ui/react-dialog";
 
-import { Item, Select,SelectContent,SelectGroup,SelectItem,SelectLabel,SelectTrigger,SelectValue } from "@radix-ui/react-select";
+import { Select,SelectContent,SelectGroup,SelectItem,SelectLabel,SelectTrigger,SelectValue } from "@/components/ui/select";
 import {FaPhoneAlt,FaEnvelope,FaMapMarkedAlt} from 'react-icons/fa'
 import { motion } from "framer-motion";
 
@@ -67,7 +66,7 @@ const contact = () => {
               </SelectContent>
             </Select>
             {/* text area */}
-            <textarea className="h-[200px]" placeholder="Type your message here" />
+            <Textarea className="h-[200px]" placeholder="Type your message here" />
             {/* btn */}
             <Button size="md" className="max-w-40">Send message</Button>
           </form>
