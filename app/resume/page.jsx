@@ -106,9 +106,9 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience" className="hover:text-accent">Experience</TabsTrigger>
+        <Tabs defaultValue="education" className="flex flex-col xl:flex-row gap-[60px]">
+          <TabsList className="flex flex-col justify-center items-start w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            {/*<TabsTrigger value="experience" className="hover:text-accent">Experience</TabsTrigger>*/}
             <TabsTrigger value="education" className="hover:text-accent">Education</TabsTrigger>
             <TabsTrigger value="skills" className="hover:text-accent">Skills</TabsTrigger>
             <TabsTrigger value="about" className="hover:text-accent">About Me</TabsTrigger>

@@ -18,19 +18,39 @@ const projects=[
   {
     num:'01',
     category:'FullStack',
-    title: 'Projects 01',
-    description:"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...",
-    stack: [{name: "HTML 5"},{name: "CSS 3"},{name: "JavaScript 5"}],
+    title: 'Healthy Farm Crops Website',
+    description:"Healthy Farm Crops is an online marketplace that connects farmers with buyers, reducing wait times and wastage. It offers a user-friendly platform with mobile compatibility for easy transactions. This solution enhances agricultural trade by providing a faster and more efficient selling process.",
+    stack: [{name: "HTML"},{name: "PHP"},{name: "CSS"},{name: "JavaScript"},{name: "SQL"}],
     image:'/assets/work/1.jpeg',
     live: '',
-    github:"",
+    github:"https://github.com/Madusanka-max/HEALTHY-FARM-CROPS-Website-Using-PHP-HTML-CSS-JavaScript-SQL",
   },
   {
     num:'02',
     category:'FullStack',
-    title: 'Projects 01',
+    title: 'Vehicle Repair Centers Website',
     description:"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb...",
-    stack: [{name: "HTML 5"},{name: "CSS 3"},{name: "JavaScript 5"}],
+    stack: [{name: "HTML"},{name: "PHP"},{name: "CSS"},{name: "JavaScript"},{name: "SQL"}],
+    image:'/assets/work/1.jpeg',
+    live: '',
+    github:"https://github.com/Madusanka-max/vehicle-repair-centers-website-using-PHP-HTML-CSS-JAVASCRIPT",
+  },
+  {
+    num:'02',
+    category:'FullStack',
+    title: 'The Grocery Shop Management System',
+    description:"The Grocery Shop Management System (GSMS) is a digital solution designed to streamline grocery store operations by automating inventory management, sales tracking, and supplier coordination. It helps store owners make informed decisions, optimize stock levels, and improve efficiency. By reducing manual work and enhancing customer satisfaction, GSMS ensures grocery stores remain competitive and cost-effective....",
+    stack: [{name: "JAVAFX"},{name: "SQL"}],
+    image:'/assets/work/1.jpeg',
+    live: '',
+    github:"https://github.com/Madusanka-max/GroceryShopManagementSystem",
+  },
+  {
+    num:'02',
+    category:'FullStack',
+    title: 'Vehicle Repair Centers Website',
+    description:"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb...",
+    stack: [{name: "HTML"},{name: "PHP"},{name: "CSS"},{name: "JavaScript"}],
     image:'/assets/work/1.jpeg',
     live: '',
     github:"",
@@ -56,12 +76,20 @@ const work = () => {
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
-              {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category}</h2>
+              <div className="flex items-center">
+                {/* Outline number */}
+                <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                  {project.num}
+                </div>
+                {/* Project category */}
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize ml-4">
+                  {project.category}
+                </h2>
+              </div>
+              {/* project title */}
+               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.title}</h2>
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-white/60 text-justify">{project.description}</p>
               {/* stack*/}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => (
