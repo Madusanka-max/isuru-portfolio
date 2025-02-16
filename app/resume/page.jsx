@@ -1,9 +1,9 @@
 "use client";
 
-import {FaCss3,FaHtml5,FaJs,FaReact,FaFigma,FaPhp,} from "react-icons/fa";
+import { FaCss3,FaHtml5,FaJs,FaReact,FaFigma,FaPhp, } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {Tooltip,TooltipContent,TooltipProvider,TooltipTrigger,} from "@radix-ui/react-tooltip";
+import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger, } from "@radix-ui/react-tooltip";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
 
