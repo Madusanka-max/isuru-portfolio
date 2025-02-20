@@ -21,7 +21,7 @@ export async function POST(req) {
     });
 
     const response = await resend.emails.send({
-      from: email,
+      from: 'isuru.rodrigo1243@isurumadusanka.live',
       to: 'isuru.rodrigo1243@gmail.com',
       subject: `New Contact Request from ${firstname} ${lastname}`,
       text: `Name: ${firstname} ${lastname}
