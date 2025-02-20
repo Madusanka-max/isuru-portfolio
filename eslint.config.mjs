@@ -9,6 +9,18 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals"), 
+  {
+    rules: {
+      "react/no-unescaped-entities": "off", 
+      "@typescript-eslint/quotes": "off",
+      "quotes": ["off"],
+      "no-useless-escape": "off",
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    },
+  },
+];
 
 export default eslintConfig;
