@@ -14,13 +14,12 @@ const about = {
     "I'm a software engineer with a passion for creating user-friendly experiences.",
   info: [
     { fieldName: "Name", fieldvalue: "Isuru Madusanka" },
-    { fieldName: "Phone", fieldvalue: "(+094 71 4288427)" },
-    { fieldName: "Experience", fieldvalue: "12+" },
-    { fieldName: "Skype", fieldvalue: "Isuru Madusanka" },
+    { fieldName: "Phone", fieldvalue: "+94 71 428 8427" },
     { fieldName: "Nationality", fieldvalue: "Sri Lankan" },
-    { fieldName: "Email", fieldvalue: "isuru23776@gmail.com" },
+    { fieldName: "Email", fieldvalue: "isuru.rodriog1243@gmail.com" },
+    /* { fieldName: "Experience", fieldvalue: "12+" }, */
     { fieldName: "Freelance", fieldvalue: "Available" },
-    { fieldName: "Language", fieldvalue: "English, Sinhala" },
+    { fieldName: "Language", fieldvalue: "English, japanese, Sinhala" },
   ],
 };
 
@@ -30,8 +29,8 @@ const experience = {
   title: "My Experience",
   description: "I have worked on various projects across various domains.",
   items: [
-    { company: "ABC", position: "Admin", duration: "2019-2020" },
-    { company: "CDS", position: "Manager", duration: "2020-2025" },
+    { company: "ABC", position: "Admin", duration: "2019 - 2020" },
+    { company: "CDS", position: "Manager", duration: "2020 - 2025" },
   ],
 };
 
@@ -43,21 +42,21 @@ const education = {
   items: [
     { institution: "CCC", 
       degree: "Primary Education", 
-      duration: "2006-2011" 
+      duration: "2006 - 2011" 
     },
     {
       institution: "STC",
       degree: "Secondary Education",
-      duration: "2011-2019",
+      duration: "2011 - 2019",
     },
     {
       institution: "NIBM",
       degree: "Diploma in Software Engineering",
-      duration: "2019-2022",
+      duration: "2019 - 2022",
     },
     { institution: "RUSL", 
       degree: "BICT Hons", 
-      duration: "2021-present" 
+      duration: "2021 - present" 
     },
   ],
 };
