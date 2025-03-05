@@ -38,25 +38,32 @@ const experience = {
 const education = {
   icon: "",
   title: "My Education",
-  description: "I have worked on various projects across various domains.",
+  description: "I have gained a strong foundation in academic studies and hands-on experience.",
   items: [
-    { institution: "CCC", 
+    { 
+      institution: "Christ Church College, Matale (CCC)", 
       degree: "Primary Education", 
       duration: "2006 - 2011" 
     },
     {
-      institution: "STC",
-      degree: "Secondary Education",
-      duration: "2011 - 2019",
+      institution: "St. Thomas' College, Matale (STC)",
+      degree: "Ordinary Level (O/L)",
+      duration: "2016",
     },
     {
-      institution: "NIBM",
+      institution: "St. Thomas' College, Matale (STC)",
+      degree: "GCE Advanced Level (A/L)",
+      duration: "2019",
+    },
+    {
+      institution: "National Institute of Business Management (NIBM), Kandy",
       degree: "Diploma in Software Engineering",
       duration: "2019 - 2022",
     },
-    { institution: "RUSL", 
-      degree: "BICT Hons", 
-      duration: "2021 - present" 
+    { 
+      institution: "Rajarata University of Sri Lanka (RUSL)", 
+      degree: "Bachelor of Information and Communication Technology (Hons)", 
+      duration: "2021 - Present",
     },
   ],
 };
@@ -152,12 +159,12 @@ const Resume = () => {
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return(
-                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
+                      <li key={index} className="bg-[#232329] h-[284px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent flex justify-self-start items-start"></span>
                           <p className="text-white/60">{item.institution}</p>
                         </div>
                       </li>
