@@ -11,10 +11,6 @@ const socials = [
     path: 'https://www.linkedin.com/in/Isuru-Madusanka-Rodrigo/'
   },
   {
-    icons: <FaYoutube />,
-    path: 'https://www.youtube.com/user/yourusername'
-  },
-  {
     icons: <FaTwitter />,
     path: 'https://twitter.com/IsuruMadu1023'
   },
